@@ -1,0 +1,18 @@
+{
+  "name": "nRV32-URJC",
+  "version": "0.1.0",
+  "description": "Nano RISC-V-URJC educational computer",
+  "keywords": ["RISCV", "computer", "cpu"],
+  "license": "GPL-2.0",
+  "authors": [{
+    "name": "Juan Gonzalez (Obijuan)",
+    "email": "obijuan.cube@gmail.com",
+    "url": "https://github.com/Obijuan"
+  }],
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "branch": "master",
+    "url": "https://github.com/Obijuan/nRV32-URJC"
+  }
+}
