@@ -428,13 +428,13 @@
             "pins": [
               {
                 "index": "4",
-                "name": "LED5",
-                "value": "39"
+                "name": "LED4",
+                "value": "41"
               },
               {
                 "index": "3",
-                "name": "LED4",
-                "value": "41"
+                "name": "LED3",
+                "value": "42"
               },
               {
                 "index": "2",
