@@ -1,11 +1,11 @@
 {
   "version": "1.2",
   "package": {
-    "name": "Rd",
+    "name": "Funct3",
     "version": "0.1",
-    "description": "Destination register",
+    "description": "Funct3 field: opcode extension",
     "author": "Juan González-Gómez (Obijuan)",
-    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22298.454%22%20height=%22151.011%22%20version=%221%22%3E%3Ctext%20style=%22line-height:0%25%22%20x=%22106.496%22%20y=%2297.312%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22green%22%3E%3Ctspan%20x=%22106.496%22%20y=%2297.312%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%20font-size=%2258.054%22%3ERD%3C/tspan%3E%3C/text%3E%3Cpath%20fill=%22none%22%20stroke=%22#000%22%20stroke-width=%223%22%20d=%22M1.5%201.5h295.454v148.011H1.5z%22/%3E%3C/svg%3E",
+    "image": "%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%22298.454%22%20height=%22151.011%22%20version=%221%22%3E%3Ctext%20style=%22line-height:0%25%22%20x=%2219.181%22%20y=%2297.312%22%20font-weight=%22400%22%20font-family=%22sans-serif%22%20letter-spacing=%220%22%20word-spacing=%220%22%20fill=%22green%22%3E%3Ctspan%20x=%2219.181%22%20y=%2297.312%22%20style=%22line-height:1.25;-inkscape-font-specification:'sans-serif%20Bold'%22%20font-weight=%22700%22%20font-size=%2258.054%22%3EFUNCT3%3C/tspan%3E%3C/text%3E%3Cpath%20fill=%22none%22%20stroke=%22#000%22%20stroke-width=%223%22%20d=%22M1.5%201.5h295.454v148.011H1.5z%22/%3E%3C/svg%3E",
     "otid": 1607062020968
   },
   "design": {
@@ -27,16 +27,32 @@
           }
         },
         {
-          "id": "0df101e6-6f9d-4c1c-b0bd-0dea47db532d",
+          "id": "e1ffdca0-3444-47a7-8dea-786ce3d5b5c0",
           "type": "basic.output",
           "data": {
-            "name": "rd",
-            "range": "[4:0]",
-            "size": 5,
+            "name": "func3",
+            "range": "[2:0]",
+            "pins": [
+              {
+                "index": "2",
+                "name": "",
+                "value": ""
+              },
+              {
+                "index": "1",
+                "name": "",
+                "value": ""
+              },
+              {
+                "index": "0",
+                "name": "",
+                "value": ""
+              }
+            ],
             "virtual": false
           },
           "position": {
-            "x": 648,
+            "x": 656,
             "y": 144
           }
         },
@@ -44,7 +60,7 @@
           "id": "3238f8fb-ade5-4d95-a02d-692defd900d6",
           "type": "basic.info",
           "data": {
-            "info": "## Rd field\n\n* Description: Destination register\n* Length: 5-bits\n* Position: Bits [11:7]\n* Instruction type: R, I, U and UJ",
+            "info": "## Funct3 field\n\n* Description: Opcode extension\n* Length: 3-bits\n* Position: Bits [14:12]\n* Instruction type: R, I, S, SB",
             "readonly": true
           },
           "position": {
@@ -60,7 +76,7 @@
           "id": "7e40701d-e3c2-4193-ade4-7a660b9433b2",
           "type": "basic.code",
           "data": {
-            "code": "assign o = i[11:7];",
+            "code": "assign o = i[14:12];",
             "params": [],
             "ports": {
               "in": [
@@ -73,8 +89,8 @@
               "out": [
                 {
                   "name": "o",
-                  "range": "[4:0]",
-                  "size": 5
+                  "range": "[2:0]",
+                  "size": 3
                 }
               ]
             }
@@ -107,10 +123,10 @@
             "port": "o"
           },
           "target": {
-            "block": "0df101e6-6f9d-4c1c-b0bd-0dea47db532d",
+            "block": "e1ffdca0-3444-47a7-8dea-786ce3d5b5c0",
             "port": "in"
           },
-          "size": 5
+          "size": 3
         }
       ]
     }
