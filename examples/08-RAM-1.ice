@@ -4385,6 +4385,24 @@
           }
         },
         {
+          "id": "3966cae6-8335-429f-bb3e-14dec720bcc6",
+          "type": "basic.memory",
+          "data": {
+            "name": "TEST-5",
+            "list": "10002083 // lw x1, 0x100(x0)\n10102223 // sw x1, 0x104(x0)\n00000093 // li x1, 0\n10402083 // lw x1, 0x104(x0)\n00000063 // halt",
+            "local": false,
+            "format": 10
+          },
+          "position": {
+            "x": -496,
+            "y": -560
+          },
+          "size": {
+            "width": 336,
+            "height": 128
+          }
+        },
+        {
           "id": "19b7655f-d8ea-46e8-b31f-da9219011d5e",
           "type": "basic.memory",
           "data": {
@@ -4403,17 +4421,35 @@
           }
         },
         {
-          "id": "3966cae6-8335-429f-bb3e-14dec720bcc6",
+          "id": "d1e37a47-329d-477a-8f5e-f6370207c1e8",
           "type": "basic.memory",
           "data": {
-            "name": "TEST-5",
-            "list": "10002083 // lw x1, 0x100(x0)\n10102223 // sw x1, 0x104(x0)\n00000093 // li x1, 0\n10402083 // lw x1, 0x104(x0)\n00000063 // halt",
+            "name": "TEST-8-AND-OR",
+            "list": "0aa00093 // li x1, 0xAA\n0010f0b3 // and x1,x1,x1\n0000f0b3 // and x1,x1,x0\n05500093 // li x1, 0x55\n0010e0b3 // or x1,x1,x1\n0000e0b3 // or x1,x1,x0\n00000063 // halt",
             "local": false,
             "format": 10
           },
           "position": {
             "x": -136,
             "y": -232
+          },
+          "size": {
+            "width": 336,
+            "height": 152
+          }
+        },
+        {
+          "id": "7e69cbce-7a25-4858-aaf3-401461c16b88",
+          "type": "basic.memory",
+          "data": {
+            "name": "TEST-7-SUB",
+            "list": "05500093 // li x1, 0x55\n401080b3 // sub x1,x1,x1\n00000063 // beq x0,x0,inf",
+            "local": false,
+            "format": 10
+          },
+          "position": {
+            "x": -88,
+            "y": -600
           },
           "size": {
             "width": 336,
@@ -4454,6 +4490,24 @@
           "size": {
             "width": 336,
             "height": 152
+          }
+        },
+        {
+          "id": "304083aa-6f21-4d67-8484-68b76f7a71e8",
+          "type": "basic.memory",
+          "data": {
+            "name": "TEST-6",
+            "list": "00100093 // li x1, 1\n001080b3 // bucle: add x1,x1,x1\nfe000ee3 // beq x0,x0,bucle",
+            "local": false,
+            "format": 10
+          },
+          "position": {
+            "x": 432,
+            "y": -536
+          },
+          "size": {
+            "width": 336,
+            "height": 128
           }
         },
         {
@@ -4547,7 +4601,7 @@
           "id": "fe88376d-c385-44a5-83e1-a75fd61cbc42",
           "type": "basic.info",
           "data": {
-            "info": "# 04 Format testing\n\nReading the instruction fields\n",
+            "info": "# 08 RAM test\n\n",
             "readonly": true
           },
           "position": {
@@ -4555,8 +4609,8 @@
             "y": -320
           },
           "size": {
-            "width": 456,
-            "height": 104
+            "width": 440,
+            "height": 48
           }
         },
         {
@@ -5863,7 +5917,7 @@
         },
         {
           "source": {
-            "block": "3966cae6-8335-429f-bb3e-14dec720bcc6",
+            "block": "d1e37a47-329d-477a-8f5e-f6370207c1e8",
             "port": "memory-out"
           },
           "target": {
