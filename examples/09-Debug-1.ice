@@ -4879,7 +4879,7 @@
           "type": "basic.constant",
           "data": {
             "name": "",
-            "value": "0",
+            "value": "1",
             "local": false
           },
           "position": {
@@ -5083,7 +5083,7 @@
           "type": "basic.memory",
           "data": {
             "name": "TEST-3 Program",
-            "list": "00a00093  // li x1, 10\nfff08093  // bucle: addi x1,x1, -1\n00008463  // beq x1,x0,fin\nfe000ce3  // beq x0,x0,bucle\n0ff00093  // fin: li x1, 0xFF\n00000063  // stop: beq x0,x0,stop",
+            "list": "00500093  // li x1, 5\nfff08093  // bucle: addi x1,x1, -1\n00008463  // beq x1,x0,fin\nfe000ce3  // beq x0,x0,bucle\n0ff00093  // fin: li x1, 0xFF\n00000063  // stop: beq x0,x0,stop",
             "local": false,
             "format": 10
           },
